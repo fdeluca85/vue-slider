@@ -11,12 +11,40 @@ body {
   font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande',
     'Lucida Sans', Arial, sans-serif;
 }
+
+
+/* ==========
+    slider
+   ========== */
+
+.container {
+  display: flex;
+  flex-direction: row;
+  align-content: center;
+  justify-content: center;
+  width: 90%;
+  margin: 20px auto;
+  /* border: 2px solid rgb(3, 3, 3); */
+}
+.container::after {
+  content: '';
+  display: table;
+  clear: both;
+}
+
+
+/* ==========
+    images
+   ========== */
+
 .images{
   height: 514px;
   display: flex;
   align-items: center;
 }
 .images img {
+  border-top-left-radius: 15px;
+  border-bottom-left-radius: 15px;
   width: 800px;
   height: 100%;
 }
@@ -31,40 +59,36 @@ body {
   height: 100px;
   filter: grayscale(100%);
 }
-.container::after {
-  content: '';
-  display: table;
-  clear: both;
-}
-.container {
-  display: flex;
-  flex-direction: row;
-  align-content: center;
-  justify-content: center;
-  width: 90%;
-  margin: 20px auto;
-  /* border: 2px solid rgb(3, 3, 3); */
-}
-
-
 .active img {
   filter: none;
 }
+
+
+/* ==========
+    button
+   ========== */
+
 .fa-arrow-circle-up {
-  font-size: 20px;
+  font-size: 25px;
   position: absolute;
-  top: 20px;
+  top: 10px;
   right: 90px;
-  color: white;
+  color: black;
   z-index: 2;
   cursor: pointer;
 }
-.fa-arrow-circle-down {
-  font-size: 20px;
-  position: absolute;
-  bottom: 20px;
-  right: 90px;
+.fa-arrow-circle-up:hover{
   color: white;
+}
+.fa-arrow-circle-down {
+  font-size: 25px;
+  position: absolute;
+  bottom: 10px;
+  right: 90px;
+  color: black;
   z-index: 2;
   cursor: pointer;
+}
+.fa-arrow-circle-down:hover{
+  color: white;
 }
