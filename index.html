@@ -16,11 +16,11 @@
             </div><!-- fine div images -->           
             
             <div class="colonna-thumb">
-                <span class="pulsante up"><i class="fa-solid fa-chevron-up" @click='prevImage() '></i></span>    
+                <span class="pulsante up"><i class="fas fa-arrow-circle-up" @click='prevImage() '></i></span>    
                 <div class="thumb" v-for="(image, index) in images" :class="index == currentImg ? 'active':'' " @click="selectImg(index)">
                     <img :src="image" alt="">
                 </div>
-                <span class="pulsante down"><i class="fa-solid fa-chevron-down" @click='nextImage()'></i></span>
+                <span class="pulsante down"><i class="fas fa-arrow-circle-down" @click='nextImage()'></i></span>
             </div><!-- fine div thumb -->
         </div><!-- fine div container -->
 
