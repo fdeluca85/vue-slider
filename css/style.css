@@ -1,6 +1,6 @@
-/* --- 
+/* ==========
     common
---- */
+   ========== */
 
 * {
   margin: 0;
@@ -10,4 +10,34 @@
 body {
   font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande',
     'Lucida Sans', Arial, sans-serif;
+}
+
+.images img {
+  width: 600px;
+  height: 300px;
+}
+.thumb img {
+  width: 200px;
+  height: 100px;
+}
+.container {
+  display: flex;
+  flex-direction: row;
+  align-content: center;
+  margin-bottom: 20px;
+  width: 90%;
+  margin: 20px auto;
+  /* border: 2px solid rgb(3, 3, 3); */
+}
+.images {
+  display: flex;
+}
+.colonna-thumb {
+  display: flex;
+  flex-direction: column;
+}
+.container::after {
+  content: '';
+  display: table;
+  clear: both;
 }
