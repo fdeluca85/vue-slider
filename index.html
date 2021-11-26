@@ -20,7 +20,7 @@
                 <div class="thumb" v-for="image in images">
                     <img :src="image" alt="">
                 </div>
-                <span class="pulsante down"><i class="fa-solid fa-chevron-down"></i></span>
+                <span class="pulsante down"><i class="fa-solid fa-chevron-down" @click='prevImage()'></i></span>
             </div><!-- fine div thumb -->
         </div><!-- fine div container -->
 

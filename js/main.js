@@ -24,6 +24,9 @@ const app = new Vue({
     methods:{
         nextImage:function(){
             this.currentImg++;
+        },
+        prevImage:function(){
+            this.currentImg--;
         }
 
     }
