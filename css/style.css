@@ -38,6 +38,7 @@ body {
 .colonna-thumb {
   display: flex;
   flex-direction: column;
+  cursor: pointer;
 }
 .container::after {
   content: '';
