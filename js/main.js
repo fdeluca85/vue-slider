@@ -23,11 +23,22 @@ const app = new Vue({
     },
     methods:{
         nextImage:function(){
-            this.currentImg++;
+            if(this.currentImg == this.images.length - 1){
+                this.currentImg = 0;
+
+            } else{
+                this.currentImg++;
+            }            
         },
         prevImage:function(){
-            this.currentImg--;
-        }
+            if (this.currentImg == 0 ){
+                this.currentImg = this.images.length -1;
+
+            } else {
+                this.currentImg--;
+            }
+            
+        },
 
     }
 

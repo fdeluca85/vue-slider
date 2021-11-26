@@ -13,8 +13,8 @@ body {
 }
 
 .images img {
-  width: 600px;
-  height: 300px;
+  width: 800px;
+  height: 500px;
 }
 .thumb img {
   width: 200px;
@@ -25,6 +25,7 @@ body {
   display: flex;
   flex-direction: row;
   align-content: center;
+  justify-content: center;
   margin-bottom: 20px;
   width: 90%;
   margin: 20px auto;
@@ -32,6 +33,7 @@ body {
 }
 .images {
   display: flex;
+  align-items: center;
 }
 .colonna-thumb {
   display: flex;
@@ -44,4 +46,7 @@ body {
 }
 .active img {
   filter: none;
+}
+.fa-solid {
+  cursor: pointer;
 }
