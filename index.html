@@ -10,21 +10,26 @@
 </head>
 <body>
     <div id="root">
+        <header></header>
         <div class="container">
             <div class="images">
-                    <img :src="images[currentImg]" alt="">
+                    <img :src="images[currentImg].img" alt="">
+                    <div class="testo">
+                        <h2>{{images[currentImg].titolo}}</h2>
+                        <p>{{images[currentImg].testo}}</p>
+                    </div>
             </div><!-- fine div images -->
             
             <div class="colonna-thumb">
-                <!-- pulsante up -->
-                <span class="pulsante up"><i class="fas fa-chevron-up" @click='prevImage()'></i></span>
-
                 <!-- immagini thumbnails -->
-                <div class="thumb" v-for="(image, index) in images" :class="index == currentImg ? 'active':'' " @click="selectImg(index)">
-                    <img :src="image" alt="">
+                <div class="thumb" v-for="(thumb, index) in images" :class="index == currentImg ? 'active':'' " @click="selectImg(index)">
+                    <img :src="thumb.img" alt="">
                 </div><!-- fine div immagini thumbnails -->
 
                 <!-- pulsante up -->
+                <span class="pulsante up"><i class="fas fa-chevron-up" @click='prevImage()'></i></span>
+
+                <!-- pulsante down -->
                 <span class="pulsante down"><i class="fas fa-chevron-down" @click='nextImage()'></i></span>
             </div><!-- fine div thumb -->
         </div><!-- fine div container -->
