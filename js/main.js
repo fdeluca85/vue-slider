@@ -28,7 +28,7 @@ const app = new Vue({
 
             } else{
                 this.currentImg++;
-            }            
+            }
         },
         prevImage:function(){
             if (this.currentImg == 0 ){
@@ -36,7 +36,7 @@ const app = new Vue({
 
             } else {
                 this.currentImg--;
-            }            
+            }
         },
         selectImg: function(index){
             this.currentImg = index;
